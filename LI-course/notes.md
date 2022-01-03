@@ -107,5 +107,31 @@
 - while (runs while a condition is true)
 
   ```bash
+    declare -i n=0
+    while (( n < 10 )) do
+      echo "n:$n"
+      (( n++ ))
+    done
+  ```
 
+- until (runs until a condition is true)
+
+  ```bash
+    declare -i m=0
+    until (( m == 10 )) do
+      echo "n:$n"
+      (( m++ ))
+    done
+  ```
+
+- for (iterate through a list of items, running code once for each item)
+
+  ```bash
+    for i in 1 2 3 do
+      echo $i
+    done
+
+    for (( i=1; i<=100; i++ )) do
+      echo $i
+    done
   ```
