@@ -2,6 +2,7 @@
 
 - bash
 
+  - is a <b>shell</b>
   - short for Bourne Again Shell
   - widely used shell
   - interactive command-line shell that allows commands to be combined into script files, which are run like programs
@@ -23,6 +24,10 @@
       - appends
     - `<num>>`
       - `ls /notreal 1>output.txt 2>error.txt`
+      - `2>`
+        - standard error
+      - `1>`
+        - standard output
     - `<`
       - input redirection
     - `<<`
@@ -64,7 +69,24 @@
   - `echo {1..30..3}`
     - 1,4,7,10,...,25,28
 
-- parameter expansion - `${..}`
+- parameter expansion - `${...}`
+
+  - returns part of a stored value
   - `man bash`
     - `/Parameter Expansion`
     - `q` to quit
+  - `echo ${<variable>/<find>/<replace>}`
+  - `echo ${<variable>//<find>/<replace>}`
+
+- command substitution - puts the output of one command inside another
+
+  - `$(...)`
+    - older representation: `...`
+  - `echo "Hi $(uname -r)`
+
+- arthmetic expansion - does math
+  - `$((...))`
+    - older representation: `$[...]`
+  - `echo $(( 2 + 2 ))`
+  - bash can only do math with integers
+    - rounds down in division/float work
