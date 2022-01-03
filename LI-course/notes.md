@@ -93,6 +93,7 @@
     - rounds down in division/float work
 
 - if
+
   ```bash
     if [[ <condition> ]]; then
       <script>
@@ -101,4 +102,10 @@
     else
       <script>
     fi
+  ```
+
+- while (runs while a condition is true)
+
+  ```bash
+
   ```
