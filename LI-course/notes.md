@@ -29,6 +29,7 @@
       - here document
 
 - commands and built-ins
+
   - commands are separate software that does not depend on Bash
   - bash includes built-in commands
     - some have same name as other commands
@@ -48,3 +49,16 @@
           - disables built-in version of echo, uses command instead
           - `enable <command-name>`
             - enables built-in
+
+- `~` - references `$HOME`
+- `~-` - references directory were just in
+
+- braces create sets or ranges
+  - `echo c{a,o,u}t`
+    - results in `cat cot cut`
+  - `echo /tmp/{1..3}/file.txt`
+    - results in `/tmp/1/file.txt /tmp/2/file.txt /tmp/3/file.txt`
+  - `echo {1..10}`
+    - 1,2,3,..,10
+  - `echo {1..30..3}`
+    - 1,4,7,10,...,25,28
