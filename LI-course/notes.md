@@ -54,6 +54,7 @@
 - `~-` - references directory were just in
 
 - braces create sets or ranges
+
   - `echo c{a,o,u}t`
     - results in `cat cot cut`
   - `echo /tmp/{1..3}/file.txt`
@@ -62,3 +63,8 @@
     - 1,2,3,..,10
   - `echo {1..30..3}`
     - 1,4,7,10,...,25,28
+
+- parameter expansion - `${..}`
+  - `man bash`
+    - `/Parameter Expansion`
+    - `q` to quit
