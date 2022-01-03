@@ -8,6 +8,7 @@
   - saves time and reduces errors
 
 - pipes and redirections
+
   - pipes send the result of one process to another
     - examples
       - `ls | wc -l`
@@ -26,3 +27,24 @@
       - input redirection
     - `<<`
       - here document
+
+- commands and built-ins
+  - commands are separate software that does not depend on Bash
+  - bash includes built-in commands
+    - some have same name as other commands
+  - some commands
+    - `echo`
+      - outputs text (newline)
+    - `printf`
+      - outputs text (no newline)
+    - `command <command-name>`
+      - run command
+      - `command -V <command-name>`
+        - get whether it is command or built-in
+    - `built-in <command-name>`
+      - built-in version of command
+      - will run built in if there are both command and built-in present, unless explicitly told not to
+        - `enable -n <command-name>`
+          - disables built-in version of echo, uses command instead
+          - `enable <command-name>`
+            - enables built-in
