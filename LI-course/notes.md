@@ -85,8 +85,20 @@
   - `echo "Hi $(uname -r)`
 
 - arthmetic expansion - does math
+
   - `$((...))`
     - older representation: `$[...]`
   - `echo $(( 2 + 2 ))`
   - bash can only do math with integers
     - rounds down in division/float work
+
+- if
+  ```bash
+    if [[ <condition> ]]; then
+      <script>
+    elif [[ <condition ]]; then
+      <script>
+    else
+      <script>
+    fi
+  ```
