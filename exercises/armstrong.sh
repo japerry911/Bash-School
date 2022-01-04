@@ -16,7 +16,11 @@ main() {
         ((TOTAL=TOTAL+ADD_VALUE))
     done
 
-    echo $TOTAL
+    if [ $TOTAL -eq $NUMBER ]; then
+        echo "true"
+    else
+        echo "false"
+    fi
     
     exit 0
 }
