@@ -8,7 +8,17 @@ main() {
 
     declare -i NUMBER=$1
     declare -i NUMBER_LENGTH="${#NUMBER}"
-    echo $NUMBER_LENGTH
+    declare -i TOTAL=0
+    
+    for (( i=0; i<${NUMBER_LENGTH}; i++ ))
+    do
+        ADD_VALUE=$((${NUMBER:i:1}**NUMBER_LENGTH))
+        ((TOTAL=TOTAL+ADD_VALUE))
+    done
+
+    echo $TOTAL
+    
+    exit 0
 }
 
 main 153
